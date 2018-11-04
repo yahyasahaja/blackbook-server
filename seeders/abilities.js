@@ -45,7 +45,7 @@ export default [
     SELF MANA REGEN: 1.8 / 2.6 / 3.4 / 4.2<br/>`,
     'mana': '/ability/crystal_maiden_brilliance_aura_hp1.png',
     'cooldown': '', 
-    'image_url': '',
+    'image_url': '', 
     'video_url': 'https://youtu.be/JGBd1B3UW38'
   },
   {
