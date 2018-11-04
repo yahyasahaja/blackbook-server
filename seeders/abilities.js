@@ -44,7 +44,7 @@ export default [
     ALLY MANA REGEN: 0.7 / 0.9 / 1.1 / 1.3<br/>
     SELF MANA REGEN: 1.8 / 2.6 / 3.4 / 4.2<br/>`,
     'mana': '/ability/crystal_maiden_brilliance_aura_hp1.png',
-    'cooldown': '',
+    'cooldown': '', 
     'image_url': '',
     'video_url': 'https://youtu.be/JGBd1B3UW38'
   },
