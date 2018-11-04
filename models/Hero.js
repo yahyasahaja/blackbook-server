@@ -12,7 +12,7 @@ export default connection.define('Hero', {
     type: Sequelize.STRING,
   },
   bio: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
   },
   tips_desc: {
     type: Sequelize.STRING,

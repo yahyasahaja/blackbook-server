@@ -34,38 +34,38 @@ export const USER_TYPE = {
   USER: 'USER'
 }
 
-export const CUSTOMER_SCOPE = [
-  'allOrders',
-  'order',
-  'createOrder',
-  'addOrderItemsToOrder',
-  'updateOrderItemInOrder',
-  'removeOrderItemsFromOrder',
-  'allCategories',
-  'allRestaurantMenus',
-  'allRestaurants',
-  'customer',
-  'customerLogin',
-  'customerRegister',
-  'verifyEmail',
-  'payOrder',
-  'updateCustomer',
+export const USER_SCOPE = [
+  'hero',
+  'allHeroes',
+  'login',
+  'register',
 ]
 
-export const RESTAURANT_SCOPE = [
-  'allOrders',
-  'order',
-  'addOrderItemsToOrder',
-  'updateOrderItemInOrder',
-  'removeOrderItemsFromOrder',
-  'allCategories',
-  'allRestaurantMenus',
-  'allRestaurants',
-  'customer',
-  'restaurantAdminLogin',
-  'restaurantAdminRegister',
-  'markOrderAsPaid',
-  'verifyEmail',
+export const MEMBER_SCOPE = [
+  'hero',
+  'allHeroes',
+  'login',
+  'register',
+  'user',
+  'updateUser',
+  'addComment',
+  'editComment',
+  'deleteComment',
+]
+
+export const ADMIN_SCOPE = [
+  'hero',
+  'allHeroes',
+  'login',
+  'register',
+  'user',
+  'updateUser',
+  'addComment',
+  'editComment',
+  'deleteComment',
+  'addHero',
+  'editHero',
+  'deleteHero',
 ]
 
 export default {

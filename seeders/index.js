@@ -5,48 +5,51 @@ import bcrypt from 'bcrypt'
 // import db from '../db'
 
 //MODELS
-import {
-  Restaurant,
-  RestaurantTable,
-  RestaurantMenu,
-  Order,
-  Category,
-  MenuCategory,
-} from '../models'
+import db from '../models/connection'
+
+const {
+  Hero,
+  Ability,
+  Status,
+  User
+} = db.models
 
 //SEEDS
-// import restaurants from './restaurants.json'
+import statuses from './statuses.js'
+import heroes from './heroes.json'
+import users from './users.json'
+import abilities from './abilities.js'
 
 //SEEDERS
 export const giveSeeds = async () => {
-  let loc
-  //ADD RESTAURANT SEEDS
-  // await Restaurant.destroy({ where: {}, force: true })
-  // for (let restaurant of restaurants)
-  //   restaurant.password = await bcrypt.hash(restaurant.password, 12)
-  // loc = await Restaurant.bulkCreate(restaurants)
+  //HEROES
+  await Hero.destroy({ where: {}, force: true })
+  await Hero.bulkCreate(heroes)
 
-  // //ADD RESTAURANT TABLES SEEDS
-  // await RestaurantTable.destroy({ where: {}, force: true })
-  // loc = await RestaurantTable.bulkCreate(restaurant_tables)
-  // // loc = await Restaurant.findOne({where: {id: 1}})
-  // // console.log(await loc.getRestaurantTables({where: {id: 1}}))
-  // // console.log(loc)
- 
-  // await Category.destroy({ where: {}, force: true })
-  // await Category.bulkCreate(categories)
+  //ABILITIES
+  await Ability.destroy({ where: {}, force: true })
+  await Ability.bulkCreate(abilities)
 
-  // await RestaurantMenu.destroy({ where: {}, force: true })
-  // loc = await RestaurantMenu.bulkCreate(restaurant_menu)
+  //STATUSES
+  await Status.destroy({ where: {}, force: true })
+  await Status.bulkCreate(statuses)
 
-  // await MenuCategory.destroy({ where: {}, force: true })
-  // await MenuCategory.bulkCreate(menu_categories)
-  
-  // await Order.create({
-  //   id: 1,
-  //   valid_until: Date.now() + 7200000000,
-  //   restaurant_id: 1,
+  //USER
+  await User.destroy({ where: {}, force: true })
+  for (let user of users)
+    user.password = await bcrypt.hash(user.password, 12)
+  await User.bulkCreate(users)
+
+  // let loc
+  // let hero = await Hero.create({
+  //   name: 'SOmething',
+  //   image: 'ogehuw',
+  //   bio: 'ogehuw',
+  //   tips_desc: 'ogehuw',
+  //   tips_video_url: 'ogehuw',
   // })
+  // await hero.destroy()
+  // for (let i in hero) if (i.indexOf('remove') != -1) console.log(i, hero[i].toString())
 }
 
 export default {

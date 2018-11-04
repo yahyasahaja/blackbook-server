@@ -60,11 +60,15 @@ async function authMiddleware(req, res, next) {
 
       if (dtoken.userType === USER_TYPE.ADMIN || dtoken.userType === USER_TYPE.MEMBER)
         req.state.user = await db.models.User.findById(dtoken.userId)
-      else req.state.user = {
-        id: 0,
-        name: USER_TYPE.USER,
-        email: '',
-        type: USER_TYPE.USER
+      else {
+        req.state.user = {
+          id: 0,
+          name: USER_TYPE.USER,
+          email: '',
+          type: USER_TYPE.USER
+        }
+
+        req.userType = USER_TYPE.USER
       }
     }
 

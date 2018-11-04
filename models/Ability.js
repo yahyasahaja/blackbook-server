@@ -13,7 +13,7 @@ export default connection.define('Ability', {
     allowNull: false,
   },
   description: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     allowNull: false,
   },
   mana: {
@@ -21,10 +21,12 @@ export default connection.define('Ability', {
     allowNull: false,
   },
   cooldown: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
     allowNull: false,
-    defaultValue: 0,
   },
+  video_url: {
+    type: Sequelize.STRING,
+  }
 }, {
   underscored: true,
   timestamps: false,

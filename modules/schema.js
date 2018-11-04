@@ -54,9 +54,9 @@ const typeDefs = gql`
     image_url: String!
     bio: String!
     tips_desc: String!
-    tipes_video_url: String!
+    tips_video_url: String!
     abilities: [Ability!]!
-    status: [Status!]!
+    statuses: [Status!]!
     comments: [Comment!]!
   }
 
@@ -66,6 +66,30 @@ const typeDefs = gql`
     filename: String!
     mimetype: String!
     encoding: String!
+  }
+
+  input AbilitiesInput {
+    name: String!
+    image_url: String!
+    description: String!
+    mana: String!
+    cooldown: Int!
+  }
+
+  input StatusesInput {
+    level: Int!
+    strength: String!
+    attack: String!
+    agility: String!
+    speed: String!
+    intelligence: String!
+    armor: String!
+  }
+
+  input CommentInput {
+    comment: String!
+    video_url: String!
+    image_url: String!
   }
 
   type Query {
@@ -85,56 +109,70 @@ const typeDefs = gql`
   "mutation"
   type Mutation {
     #CUSTOMER
-    # "customer login and get user token"
-    # customerLogin(email: String!, password: String!): String!
+    "user login and get user token"
+    login(email: String!, password: String!): String!
 
-    # "customer registration and get user token"
-    # customerRegister(
-    #   email: String!
-    #   password: String!
-    #   name: String!
-    # ): String!
+    "user registration and get user token"
+    register(
+      email: String!
+      password: String!
+      name: String!
+      role: UserRole
+    ): String!
 
-    # "update customer profile"
-    # updateCustomer(input: UpdateCustomerInput!): String!
+    "update user profile"
+    updateUser(
+      email: String
+      name: String
+      newPassword: String
+      currentPassword: String
+      profpic_url: String
+    ): User!
 
-    # "verify email verification token"
-    # verifyCustomerToken(token: String): Customer
+    "add a comment"
+    addComment(
+      heroId: ID!
+      comment: String!
+      video_url: String
+      image_url: String
+    ): Comment!
 
-    # #RESTAURANT ADMIN
-    # "restaurant admin login, and get user token"
-    # restaurantAdminLogin(email: String!, password: String!): String!
+    "update a comment"
+    updateComment(
+      id: ID!
+      comment: String!
+      video_url: String
+      image_url: String
+    ): Comment!
 
-    # "update Restaurant Admin"
-    # updateRestaurantAdmin(input: UpdateCustomerInput!): RestaurantAdmin
+    "delete comment by id"
+    deleteComment(id: ID!): String!
 
-    # "verify email verification token"
-    # verifyRestaurantAdminToken(token: String): RestaurantAdmin
+    "add new hero"
+    addHero(
+      name: String!
+      image_url: String!
+      bio: String!
+      tips_desc: String!
+      tips_video_url: String!
+      abilities: [AbilitiesInput!]!
+      statuses: [StatusesInput!]!
+    ): Hero
 
-    # #RESTAURANT
-    # updateRestaurant(input: UpdateRestaurantInput!): Restaurant
+    "update a hero"
+    updateHero(
+      id: ID!
+      name: String!
+      image_url: String!
+      bio: String!
+      tips_desc: String!
+      tips_video_url: String!
+      abilities: [AbilitiesInput!]!
+      statuses: [StatusesInput!]!
+    ): Hero
 
-    # #"verify email verification token"
-    # #verifyRestaurant(token: String!): Restaurant
-
-    # #TRANSACTION
-    # "create a new order"
-    # createOrder(restaurant_id: ID!): Order
-    
-    # "mark order as paid (for restaurant admin)"
-    # markOrderAsPaid(token: ID!): Order
-
-    # "add order item to order (for restaurant admin)"
-    # addOrderItemsToOrder(token: String!, order_items: [OrderItemInput!]!): Order
-
-    # "remove order item to order (for restaurant admin)"
-    # removeOrderItemsFromOrder(token: String!, order_item_ids: [ID!]!): Order
-
-    # "update order item to order (for restaurant admin)"
-    # replaceOrderItemsInOrder(token: String!, order_items: [OrderItemInput!]!): Order
-
-    # "pay order using T-Pay"
-    # payOrder(order_id: ID!): Order
+    "delete a hero by id"
+    deleteHero(id: ID!): String!
 
     #UPLOADS
     singleUpload(file: Upload!): File!
