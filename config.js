@@ -1,6 +1,6 @@
 export const LOG_MODE = 'dev'
 
-const test = false
+const test = process.env.NODE_ENV === 'development'
 
 let database
 if (test) {
