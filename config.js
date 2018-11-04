@@ -1,6 +1,6 @@
 export const LOG_MODE = 'dev'
 
-const test = true
+const test = false
 
 let database
 if (test) {
@@ -15,8 +15,8 @@ if (test) {
   }
 } else database = {
   DATABASE_NAME: 'blackbook',
-  USER: 'sans',
-  PASSWORD: 'sans123',
+  USER: 'root',
+  PASSWORD: 'sansaja123',
   HOST: 'localhost',
   DIALECT: 'mysql',
   PORT: 3306,
