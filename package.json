@@ -7,8 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV=production node build/index.js",
-    "dev": "NODE_ENV=development nodemon index.js --exec babel-node",
-    "build": "babel index.js -d build",
+    "dev": "NODE_ENV=development nodemon ./src/index.js --exec babel-node",
+    "build": "babel ./src -d build",
     "test": "node scripts/test.js --env=jsdom",
     "postinstall": "yarn run build"
   },

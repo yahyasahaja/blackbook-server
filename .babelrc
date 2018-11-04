@@ -3,7 +3,6 @@
     "targets": {
       "node": "current"
     },
-    "modules": true,
     "useBuiltIns": true,
     "debug": true
   }], "stage-0"],

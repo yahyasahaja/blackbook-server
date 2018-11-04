@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/yahyasahaja/.nvm/versions/node/v8.10.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js build
+  /Users/yahyasahaja/.nvm/versions/node/v8.10.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js start
 
 PATH: 
   /Users/yahyasahaja/.nvm/versions/node/v8.10.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:/Applications/Wireshark.app/Contents/MacOS:/Users/yahyasahaja/Library/Android/sdk/tools:/Users/yahyasahaja/Library/Android/sdk/platform-tools
@@ -24,7 +24,7 @@ npm manifest:
     "scripts": {
       "start": "NODE_ENV=production node build/index.js",
       "dev": "NODE_ENV=development nodemon index.js --exec babel-node",
-      "build": "babel index.js -d build",
+      "build": "babel ./src -d build",
       "test": "node scripts/test.js --env=jsdom",
       "postinstall": "yarn run build"
     },
@@ -5939,7 +5939,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c babel index.js -d build
+  Arguments: -c NODE_ENV=production node build/index.js
   Directory: /Users/yahyasahaja/Projects/kuliah/semester5/rpl/blackbook-server
   Output:
   

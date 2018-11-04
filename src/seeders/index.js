@@ -16,8 +16,8 @@ const {
 
 //SEEDS
 import statuses from './statuses.js'
-import heroes from './heroes.json'
-import users from './users.json'
+import heroes from './heroes.js'
+import users from './users.js'
 import abilities from './abilities.js'
 
 //SEEDERS

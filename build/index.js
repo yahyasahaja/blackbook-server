@@ -1,3 +1,5 @@
+'use strict';
+
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 //AUTH
@@ -16,19 +18,19 @@ let authMiddleware = (() => {
           error: 'Bad token format'
         });
 
-        const dtoken = jwt.verify(token, JWT.SECRET_KEY);
+        const dtoken = _jsonwebtoken2.default.verify(token, _config.JWT.SECRET_KEY);
 
         req.state = _extends({}, req.state, dtoken);
 
-        if (dtoken.userType === USER_TYPE.ADMIN || dtoken.userType === USER_TYPE.MEMBER) req.state.user = yield db.models.User.findById(dtoken.userId);else {
+        if (dtoken.userType === _config.USER_TYPE.ADMIN || dtoken.userType === _config.USER_TYPE.MEMBER) req.state.user = yield _models2.default.models.User.findById(dtoken.userId);else {
           req.state.user = {
             id: 0,
-            name: USER_TYPE.USER,
+            name: _config.USER_TYPE.USER,
             email: '',
-            type: USER_TYPE.USER
+            type: _config.USER_TYPE.USER
           };
 
-          req.userType = USER_TYPE.USER;
+          req.userType = _config.USER_TYPE.USER;
         }
       }
 
@@ -48,36 +50,69 @@ let authMiddleware = (() => {
 //GRAPHQL
 
 
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+var _express = require('express');
 
-//MODULES
-import Express from 'express';
-import graphqlExpress from 'express-graphql';
-import jwt from 'jsonwebtoken';
+var _express2 = _interopRequireDefault(_express);
+
+var _expressGraphql = require('express-graphql');
+
+var _expressGraphql2 = _interopRequireDefault(_expressGraphql);
+
+var _jsonwebtoken = require('jsonwebtoken');
+
+var _jsonwebtoken2 = _interopRequireDefault(_jsonwebtoken);
+
+var _cors = require('cors');
+
+var _cors2 = _interopRequireDefault(_cors);
+
+var _compression = require('compression');
+
+var _compression2 = _interopRequireDefault(_compression);
+
+var _apolloUploadServer = require('apollo-upload-server');
+
+var _bodyParser = require('body-parser');
+
+var _bodyParser2 = _interopRequireDefault(_bodyParser);
+
+var _schema = require('./modules/schema');
+
+var _schema2 = _interopRequireDefault(_schema);
+
+var _events = require('./events');
+
+var _models = require('./models');
+
+var _models2 = _interopRequireDefault(_models);
+
+var _config = require('./config');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; } //MODULES
+
 // import path from 'path'
-import cors from 'cors';
-import compression from 'compression';
-import { apolloUploadExpress } from 'apollo-upload-server';
-import bodyParser from 'body-parser';
+
 
 //SCHEMA_RESTAURANT
-import schema from './modules/schema';
+
 
 //EVENTS
-import { DB_CONNECTED, events } from './events';
+
 
 //DATABASE
-import db from './models';
+
 
 //CONFIG
-import { JWT, USER_TYPE } from './config';
+
 
 //INNER_CONFIG
 const PORT = 5000;
-let app = Express();
+let app = (0, _express2.default)();
 
 //PARSER
-bodyParser.urlencoded({ extended: true });
+_bodyParser2.default.urlencoded({ extended: true });
 
 //CUSTOM_CORS
 app.use((req, res, next) => {
@@ -89,17 +124,17 @@ app.use((req, res, next) => {
 });
 
 //COMPRESSION
-app.use(compression());app.use('/graphql', authMiddleware, bodyParser.json(), cors(), apolloUploadExpress(), graphqlExpress(req => ({
-  schema,
+app.use((0, _compression2.default)());app.use('/graphql', authMiddleware, _bodyParser2.default.json(), (0, _cors2.default)(), (0, _apolloUploadServer.apolloUploadExpress)(), (0, _expressGraphql2.default)(req => ({
+  schema: _schema2.default,
   pretty: true,
   graphiql: true,
   context: _extends({
-    JWT_SECRET_KEY: JWT.SECRET_KEY
+    JWT_SECRET_KEY: _config.JWT.SECRET_KEY
   }, req.state)
 })));
 
 //START_SERVER 
 //LISTEN TO PORT
-events.on(DB_CONNECTED, () => {
+_events.events.on(_events.DB_CONNECTED, () => {
   app.listen(PORT, () => console.log(`Server running at port ${PORT}`));
 });
