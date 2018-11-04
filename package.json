@@ -1,8 +1,8 @@
 {
-  "name": "sans-server",
+  "name": "blackbook-server",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/yahyasahaja/sans-server.git",
+  "repository": "https://github.com/yahyasahaja/blackbook-server.git",
   "author": "Yahya Sahaja <yahya.sahaja2@gmail.com>",
   "license": "MIT",
   "scripts": {
