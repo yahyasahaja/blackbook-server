@@ -15,7 +15,7 @@ export default [
   {
     id: 2,
     hero_id: 1,
-    level: 2,
+    level: 15,
     strength: 24,
     attack: 60,
     agility: 60,
@@ -28,7 +28,7 @@ export default [
   {
     id: 3,
     hero_id: 1,
-    level: 3,
+    level: 25,
     strength: 40,
     attack: 100,
     agility: 50,
