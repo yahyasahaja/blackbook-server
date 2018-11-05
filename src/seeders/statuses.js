@@ -14,7 +14,7 @@ export default [
     level: 2,
     strength: 24,
     attack: 60,
-    agility: 61,
+    agility: 60,
     speed: 400,
     intellligence: 21,
     armor: 6.1,
