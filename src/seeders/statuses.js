@@ -1,5 +1,6 @@
 export default [
   {
+    id: 1,
     hero_id: 1,
     level: 1,
     strength: 18,
@@ -8,8 +9,11 @@ export default [
     speed: 277,
     intellligence: 14,
     armor: 2.66,
+    mana: 50,
+    health: 24,
   },
   {
+    id: 2,
     hero_id: 1,
     level: 2,
     strength: 24,
@@ -18,8 +22,11 @@ export default [
     speed: 400,
     intellligence: 21,
     armor: 6.1,
+    mana: 50,
+    health: 24,
   },
   {
+    id: 3,
     hero_id: 1,
     level: 3,
     strength: 40,
@@ -28,5 +35,7 @@ export default [
     speed: 532,
     intellligence: 33,
     armor: 8.7,
+    mana: 50,
+    health: 24,
   },
 ]
