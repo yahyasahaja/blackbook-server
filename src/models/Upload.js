@@ -4,6 +4,11 @@ import connection from './connection'
 export default connection.define(
   'Upload',
   {
+    id: {
+      type: Sequelize.STRING,
+      primaryKey: true,
+      unique: true
+    },
     file_name: {
       type: Sequelize.STRING, 
     },

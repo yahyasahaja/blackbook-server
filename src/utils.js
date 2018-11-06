@@ -7,7 +7,7 @@ import db from './models'
 import fs from 'fs'
 
 //CONFIG
-const uploadDir = './uploads'
+const uploadDir = './src/uploads'
 mkdirp.sync(uploadDir)
 
 //UTILS
@@ -88,8 +88,9 @@ export const storeFS = ({ stream, filename }) => {
 
 export const processUpload = async upload => {
   const { stream, filename, mimetype, encoding } = await upload
-  const { id, path } = await storeFS({ stream, filename })
-  return await db.models.Uploads.create({ id, filename, mimetype, encoding, path })
+  const { id } = await storeFS({ stream, filename })
+  let path = `/${id}-${filename}`
+  return await db.models.Upload.create({ id, filename, mimetype, encoding, path })
 }
 
 export default {

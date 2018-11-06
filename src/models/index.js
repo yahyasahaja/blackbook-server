@@ -10,6 +10,7 @@ import Hero from './Hero'
 import User from './User'
 import Status from './Status'
 import Comment from './Comment'
+import './Upload'
 
 //MODEL_RELATIONS
 // Customer.hasMany(Order, { foreignKey: 'customer_id' })
