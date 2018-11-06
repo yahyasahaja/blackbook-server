@@ -14,7 +14,7 @@ export default connection.define('User', {
     unique: true
   },
   password: {
-    type: Sequelize.STRING(128),
+    type: Sequelize.TEXT,
     allowNull: false,
   },
   profpic_url: {
@@ -27,4 +27,4 @@ export default connection.define('User', {
 }, {
   underscored: true,
   timestamps: false,
-}) 
+})  

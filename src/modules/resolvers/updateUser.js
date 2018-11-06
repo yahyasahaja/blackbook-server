@@ -13,13 +13,13 @@ export default async (obj, {
   }) => {
   if (scope.includes('updateUser')) {
     try {
-      if (!await bcrypt.compare(currentPassword, user.password)) {
+      if (currentPassword && !(await bcrypt.compare(currentPassword, user.password))) {
         throw new Error('Invalid Password')
       }
-
+      
       let input = { email, name, password: newPassword, profpic_url }
-      for (let key in input) user[key] = input[key]
-
+      for (let key in input) if (input[key]) user[key] = input[key]
+      
       return await user.save()
     } catch (error) {
       throw error
