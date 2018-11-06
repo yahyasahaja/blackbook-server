@@ -98,6 +98,8 @@ app.use(
   }))
 )
 
+app.use(Express.static('./uploads'))
+
 //START_SERVER 
 //LISTEN TO PORT
 events.on(DB_CONNECTED, () => {
