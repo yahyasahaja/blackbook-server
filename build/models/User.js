@@ -27,7 +27,7 @@ exports.default = _connection2.default.define('User', {
     unique: true
   },
   password: {
-    type: _sequelize2.default.STRING(128),
+    type: _sequelize2.default.TEXT,
     allowNull: false
   },
   profpic_url: {

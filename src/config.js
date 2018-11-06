@@ -1,7 +1,7 @@
 export const LOG_MODE = 'dev'
 
 const test = process.env.NODE_ENV === 'development'
-
+console.log(process.env.NODE_ENV)
 let database
 if (test) {
   database = {

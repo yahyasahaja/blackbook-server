@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 const LOG_MODE = exports.LOG_MODE = 'dev';
 
 const test = process.env.NODE_ENV === 'development';
-
+console.log(process.env.NODE_ENV);
 let database;
 if (test) {
   database = {

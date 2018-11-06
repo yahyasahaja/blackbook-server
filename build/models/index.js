@@ -30,6 +30,8 @@ var _Comment = require('./Comment');
 
 var _Comment2 = _interopRequireDefault(_Comment);
 
+require('./Upload');
+
 var _seeders = require('../seeders');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

@@ -99,8 +99,8 @@ app.use(
   }))
 )
 // const test = process.env.NODE_ENV === 'development'
-app.use(Express.static(path.resolve('./src/uploads')))
-
+app.use(Express.static(path.resolve('./src/public')))
+ 
 //START_SERVER 
 //LISTEN TO PORT
 events.on(DB_CONNECTED, () => {

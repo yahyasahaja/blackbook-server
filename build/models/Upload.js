@@ -15,6 +15,11 @@ var _connection2 = _interopRequireDefault(_connection);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _connection2.default.define('Upload', {
+  id: {
+    type: _sequelize2.default.STRING,
+    primaryKey: true,
+    unique: true
+  },
   file_name: {
     type: _sequelize2.default.STRING
   },

@@ -36,7 +36,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
 //CONFIG
-const uploadDir = './uploads';
+const uploadDir = './src/public/uploads';
 _mkdirp2.default.sync(uploadDir);
 
 //UTILS
@@ -115,8 +115,9 @@ const storeFS = exports.storeFS = ({ stream, filename }) => {
 const processUpload = exports.processUpload = (() => {
   var _ref2 = _asyncToGenerator(function* (upload) {
     const { stream, filename, mimetype, encoding } = yield upload;
-    const { id, path } = yield storeFS({ stream, filename });
-    return yield _models2.default.models.Uploads.create({ id, filename, mimetype, encoding, path });
+    const { id } = yield storeFS({ stream, filename });
+    let path = `/uploads/${id}-${filename}`;
+    return yield _models2.default.models.Upload.create({ id, filename, mimetype, encoding, path });
   });
 
   return function processUpload(_x3) {

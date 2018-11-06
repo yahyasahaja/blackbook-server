@@ -26,12 +26,12 @@ exports.default = (() => {
   }) {
     if (scope.includes('updateUser')) {
       try {
-        if (!(yield _bcrypt2.default.compare(currentPassword, user.password))) {
+        if (currentPassword && !(yield _bcrypt2.default.compare(currentPassword, user.password))) {
           throw new Error('Invalid Password');
         }
 
-        let input = { email, name, password: newPassword, profpic_url };
-        for (let key in input) user[key] = input[key];
+        let input = { email, name, password: newPassword && (yield _bcrypt2.default.hash(newPassword, 12)), profpic_url };
+        for (let key in input) if (input[key]) user[key] = input[key];
 
         return yield user.save();
       } catch (error) {
