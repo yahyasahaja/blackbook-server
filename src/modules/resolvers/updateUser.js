@@ -17,7 +17,7 @@ export default async (obj, {
         throw new Error('Invalid Password')
       }
       
-      let input = { email, name, password: newPassword, profpic_url }
+      let input = { email, name, password: await bcrypt.hash(newPassword, 12), profpic_url }
       for (let key in input) if (input[key]) user[key] = input[key]
       
       return await user.save()
