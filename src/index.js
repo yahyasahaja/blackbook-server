@@ -7,6 +7,7 @@ import cors from 'cors'
 import compression from 'compression'
 import { apolloUploadExpress } from 'apollo-upload-server'
 import bodyParser from 'body-parser'
+import path from 'path'
 
 //SCHEMA_RESTAURANT
 import schema from './modules/schema'
@@ -97,8 +98,8 @@ app.use(
     }
   }))
 )
-
-app.use(Express.static('./uploads'))
+// const test = process.env.NODE_ENV === 'development'
+app.use(Express.static(path.resolve('./src/uploads')))
 
 //START_SERVER 
 //LISTEN TO PORT
