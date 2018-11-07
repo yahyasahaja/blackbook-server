@@ -27,6 +27,7 @@ const typeDefs = gql`
     description: String!
     mana: String!
     cooldown: String!
+    video_url: String!
   }
 
   type Status {
@@ -74,6 +75,7 @@ const typeDefs = gql`
     description: String!
     mana: String!
     cooldown: String!
+    video_url: String
   }
 
   input StatusesInput {
