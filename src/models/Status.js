@@ -24,7 +24,7 @@ export default connection.define('Status', {
     type: Sequelize.STRING(20),
     allowNull: false,
   },
-  intellligence: {
+  intelligence: {
     type: Sequelize.STRING(20),
     allowNull: false,
   },
