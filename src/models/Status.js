@@ -9,27 +9,27 @@ export default connection.define('Status', {
     allowNull: false,
   },
   strength: {
-    type: Sequelize.STRING(20),
+    type: Sequelize.DOUBLE,
     allowNull: false,
   },
   attack: {
-    type: Sequelize.STRING(20),
+    type: Sequelize.DOUBLE,
     allowNull: false,
   },
   agility: {
-    type: Sequelize.STRING(20),
+    type: Sequelize.DOUBLE,
     allowNull: false,
   },
   speed: {
-    type: Sequelize.STRING(20),
+    type: Sequelize.DOUBLE,
     allowNull: false,
   },
   intelligence: {
-    type: Sequelize.STRING(20),
+    type: Sequelize.DOUBLE,
     allowNull: false,
   },
   armor: {
-    type: Sequelize.STRING(20),
+    type: Sequelize.DOUBLE,
     allowNull: false,
   },
 }, {
