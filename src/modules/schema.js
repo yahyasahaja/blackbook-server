@@ -26,7 +26,7 @@ const typeDefs = gql`
     image_url: String!
     description: String!
     mana: String!
-    cooldown: Int!
+    cooldown: String!
   }
 
   type Status {
