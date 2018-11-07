@@ -32,12 +32,12 @@ const typeDefs = gql`
   type Status {
     id: ID!
     level: Int!
-    strength: Int!
-    attack: Int!
-    agility: Int!
-    speed: Int!
-    intelligence: Int!
-    armor: Int!
+    strength: Float!
+    attack: Float!
+    agility: Float!
+    speed: Float!
+    intelligence: Float!
+    armor: Float!
   }
 
   type Comment {
@@ -78,12 +78,12 @@ const typeDefs = gql`
 
   input StatusesInput {
     level: Int!
-    strength: Int!
-    attack: Int!
-    agility: Int!
-    speed: Int!
-    intelligence: Int!
-    armor: Int!
+    strength: Float!
+    attack: Float!
+    agility: Float!
+    speed: Float!
+    intelligence: Float!
+    armor: Float!
   }
 
   input CommentInput {
