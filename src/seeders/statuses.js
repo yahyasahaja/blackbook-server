@@ -6,7 +6,7 @@ export default [
     attack: 43,
     agility: 16,
     speed: 277,
-    intellligence: 14,
+    intelligence: 14,
     armor: 2.66,
   },
   {
@@ -16,7 +16,7 @@ export default [
     attack: 60,
     agility: 30,
     speed: 400,
-    intellligence: 21,
+    intelligence: 21,
     armor: 6.1,
   },
   {
@@ -26,7 +26,7 @@ export default [
     attack: 100,
     agility: 50,
     speed: 532,
-    intellligence: 33,
+    intelligence: 33,
     armor: 8.7,
   },
 ]
