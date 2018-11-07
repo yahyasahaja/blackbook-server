@@ -49,7 +49,7 @@ export const MEMBER_SCOPE = [
   'user',
   'updateUser',
   'addComment',
-  'editComment',
+  'updateComment',
   'deleteComment',
 ]
 
@@ -61,7 +61,7 @@ export const ADMIN_SCOPE = [
   'user',
   'updateUser',
   'addComment',
-  'editComment',
+  'updateComment',
   'deleteComment',
   'addHero',
   'editHero',
