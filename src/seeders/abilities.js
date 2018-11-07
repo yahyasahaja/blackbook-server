@@ -43,9 +43,9 @@ export default [
     AFFECTS: Allies<br/>
     ALLY MANA REGEN: 0.7 / 0.9 / 1.1 / 1.3<br/>
     SELF MANA REGEN: 1.8 / 2.6 / 3.4 / 4.2<br/>`,
-    'mana': '/ability/crystal_maiden_brilliance_aura_hp1.png',
-    'cooldown': '', 
-    'image_url': '', 
+    'mana': '140/145/150/155',
+    'cooldown': '9/8/7/6', 
+    'image_url': '/ability/crystal_maiden_brilliance_aura_hp1.png', 
     'video_url': 'https://youtu.be/JGBd1B3UW38'
   },
   {
