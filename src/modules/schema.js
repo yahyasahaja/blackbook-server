@@ -44,8 +44,8 @@ const typeDefs = gql`
   type Comment {
     id: ID!
     comment: String!
-    video_url: String!
-    image_url: String!
+    video_url: String
+    image_url: String
     user: User!
   }
 
@@ -90,8 +90,8 @@ const typeDefs = gql`
 
   input CommentInput {
     comment: String!
-    video_url: String!
-    image_url: String!
+    video_url: String
+    image_url: String
   }
 
   type Query {
