@@ -10,11 +10,9 @@ export default connection.define('Comment', {
   },
   video_url: {
     type: Sequelize.STRING,
-    allowNull: false,
   },
   image_url: {
     type: Sequelize.STRING,
-    allowNull: false,
   },
 }, {
   underscored: true,
