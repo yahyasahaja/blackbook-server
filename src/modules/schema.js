@@ -164,13 +164,13 @@ const typeDefs = gql`
     "update a hero"
     updateHero(
       id: ID!
-      name: String!
-      image_url: String!
-      bio: String!
-      tips_desc: String!
-      tips_video_url: String!
-      abilities: [AbilitiesInput!]!
-      statuses: [StatusesInput!]!
+      name: String
+      image_url: String
+      bio: String
+      tips_desc: String
+      tips_video_url: String
+      abilities: [AbilitiesInput]
+      statuses: [StatusesInput]
     ): Hero
 
     "delete a hero by id"

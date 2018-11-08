@@ -64,7 +64,7 @@ export const ADMIN_SCOPE = [
   'updateComment',
   'deleteComment',
   'addHero',
-  'editHero',
+  'updateHero',
   'deleteHero',
 ]
 

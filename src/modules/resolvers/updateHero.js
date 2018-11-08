@@ -14,7 +14,6 @@ export default async (obj, {
   if (scope.includes('updateHero')) {
     try {
       let hero = await db.models.Hero.findById(id)
-
       if (!hero) throw new Error('Comment id is not exist')
       
       let input = { 
@@ -24,18 +23,23 @@ export default async (obj, {
         tips_desc,
         tips_video_url,
       }
-
-      for (let key in input) hero[key] = input[key]
+      
+      for (let key in input) if (hero[key]) hero[key] = input[key]
       //save
       await hero.save()
-      await hero.removeAbilities([])
-      await hero.addAbilities(abilities)
-      await hero.removeStatuses([])
-      await hero.addStatuses(statuses)
+      if (abilities) {
+        await hero.removeAbilities([])
+        await hero.addAbilities(abilities)
+      }
+
+      if (statuses) {
+        await hero.removeStatuses([])
+        await hero.addStatuses(statuses)
+      } 
       
       return hero
     } catch (error) {
-      throw error
+      throw new Error(error)
     }
   } else {
     throw new Error('Permission Denied')

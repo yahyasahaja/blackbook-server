@@ -11,6 +11,9 @@ import multipleUpload from './multipleUpload'
 import addComment from './addComment'
 import updateComment from './updateComment'
 import deleteComment from './deleteComment'
+import addHero from './addHero'
+import updateHero from './updateHero'
+import deleteHero from './deleteHero'
 
 export default {
   Upload: GraphQLUpload,
@@ -46,5 +49,8 @@ export default {
     deleteComment,
     multipleUpload,
     singleUpload,
+    updateHero,
+    deleteHero,
+    addHero,
   }
 }
