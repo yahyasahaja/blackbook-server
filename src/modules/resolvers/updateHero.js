@@ -28,12 +28,12 @@ export default async (obj, {
       //save
       await hero.save()
       if (abilities) {
-        await hero.removeAbilities([])
+        await hero.removeAbilities({})
         await hero.addAbilities(abilities)
       }
 
       if (statuses) {
-        await hero.removeStatuses([])
+        await hero.removeStatuses({})
         await hero.addStatuses(statuses)
       } 
       
