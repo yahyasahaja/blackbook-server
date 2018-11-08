@@ -26,16 +26,26 @@ export default async (obj, {
       
       for (let key in input) if (hero[key]) hero[key] = input[key]
       //save
-      await hero.save()
-      if (abilities) {
-        await hero.removeAbilities({})
-        await hero.addAbilities(abilities)
+      try {
+        await hero.save()
+      } catch (err) {
+        err
       }
-
+      
+      if (abilities) {
+        await hero.setAbilities([])
+        await db.models.Ability.destroy({where: {hero_id: hero.id}})
+        await hero.addAbilities((await db.models.Ability.bulkCreate(abilities)).map(d => d.id))
+      }
       if (statuses) {
-        await hero.removeStatuses({})
-        await hero.addStatuses(statuses)
-      } 
+        await hero.setStatuses([])
+        await db.models.Status.destroy({where: {hero_id: hero.id}})
+        let res = []
+        for (let status of statuses) {
+          if (status.attack) res.push(status)
+        }
+        await hero.addStatuses((await db.models.Status.bulkCreate(res)).map(d => d.id))
+      }
       
       return hero
     } catch (error) {

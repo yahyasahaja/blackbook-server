@@ -28,7 +28,8 @@ export const giveSeeds = async () => {
 
   //ABILITIES
   await Ability.destroy({ where: {}, force: true })
-  await Ability.bulkCreate(abilities)
+  let cb = await Ability.bulkCreate(abilities)
+  console.log(cb.map(d => d.id))
 
   //STATUSES
   await Status.destroy({ where: {}, force: true })
@@ -39,6 +40,12 @@ export const giveSeeds = async () => {
   for (let user of users)
     user.password = await bcrypt.hash(user.password, 12)
   await User.bulkCreate(users)
+
+  let hero = await Hero.findById(1)
+  for (let i in hero) if (i.indexOf('Status') != -1) console.log(i)
+  // console.log((await hero.getStatuses()).length)
+  // await hero.removeStatus(1)
+  // console.log((await Status.findAll()).length)
 
   // let loc
   // let hero = await Hero.create({
