@@ -20,7 +20,7 @@ export default async (obj, {
         tips_desc,
         tips_video_url,
       })
-
+ 
       if (abilities) {
         await hero.addAbilities((await db.models.Ability.bulkCreate(abilities)).map(d => d.id))
       }
