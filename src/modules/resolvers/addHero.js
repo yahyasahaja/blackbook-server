@@ -21,8 +21,16 @@ export default async (obj, {
         tips_video_url,
       })
 
-      await hero.addAbilities(abilities)
-      await hero.addStatuses(statuses)
+      if (abilities) {
+        await hero.addAbilities((await db.models.Ability.bulkCreate(abilities)).map(d => d.id))
+      }
+      if (statuses) {
+        let res = []
+        for (let status of statuses) {
+          if (status.attack) res.push(status)
+        }
+        await hero.addStatuses((await db.models.Status.bulkCreate(res)).map(d => d.id))
+      }
 
       return hero
     } catch (error) {
