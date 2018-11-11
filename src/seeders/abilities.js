@@ -374,4 +374,409 @@ export default [
     'image_url': '/ability/legion_commander_duel.png',
     'video_url': 'https://youtu.be/uK5sUO2zCTU'
   },
+  {
+    'id': 25,
+    'hero_id': 7,
+    'name': 'Purification',
+    'description': `Instantly heals a friendly unit and damages all nearby enemy units.<br/>
+    </br>ABILITY: Unit Target</br>
+    AFFECTS: Allied Units</br>
+    DAMAGE TYPE: Pure</br>
+    PIERCES SPELL IMMUNITY: No</br>
+    DAMAGE RADIUS: 260</br>`,
+    'mana': '85/100/115/130',
+    'cooldown': '14/13/12/11',
+    'image_url': '/ability/omniknight_purification_hp1.png',
+    'video_url': 'https://youtu.be/ohj0Wq-YJAQ'
+  },
+  {
+    'id': 26,
+    'hero_id': 7,
+    'name': 'Repel',
+    'description': `Creates a divine barrier around an ally which grants them Spell Immunity and 100% resistance to Magic Damage. DISPEL TYPE: Basic Dispel<br/>
+    </br>ABILITY: Unit Target</br>
+    AFFECTS: Allied Units</br>
+    PIERCES SPELL IMMUNITY: No</br>`,
+    'mana': '85',
+    'cooldown': '30/26/22/18',
+    'image_url': '/ability/omniknight_repel_hp1.png',
+    'video_url': 'https://youtu.be/rlLqiwxB4ko'
+  },
+  {
+    'id': 27,
+    'hero_id': 7,
+    'name': 'Degen Aura',
+    'description': `Greatly degenerates the movement and attack capabilities of enemy units that stray too near.
+    <br/><br/>ABILITY: Passive, Aura</br>
+    AFFECTS: Enemies</br>
+    PIERCES SPELL IMMUNITY: No</br>
+    RADIUS: 300</br>`,
+    'mana': 'passive',
+    'cooldown': 'passive', 
+    'image_url': '/ability/omniknight_degen_aura_hp1.png', 
+    'video_url': 'https://youtu.be/P3yU81TYOYU'
+  },
+  {
+    'id': 28,
+    'hero_id': 7,
+    'name': 'Guardian Angel',
+    'description': `Omniknight summons a Guardian Angel that grants immunity from physical damage. Upgradable by Aghanim's Scepter
+    <br/><br/>ABILITY: No Target</br>
+    PIERCES SPELL IMMUNITY: Yes</br>
+    DURATION: 6 / 7 / 8</br>
+    RADIUS: 600</br>
+    SCEPTER DURATION: 8 / 9 / 10</br>`,
+    'mana': '125/175/250',
+    'cooldown': '180/170/160',
+    'image_url': '/ability/omniknight_guardian_angel_hp1.png',
+    'video_url': 'https://youtu.be/SIBSA30sMz4'
+  },
+  {
+    'id': 29,
+    'hero_id': 8,
+    'name': 'Storm Hammer',
+    'description': `Sven unleashes his magical gauntlet that deals damage and stuns enemy units.<br/>
+    </br>ABILITY: Unit Target</br>
+    AFFECTS: Enemy Units</br>
+    DAMAGE TYPE: Magical</br>
+    PIERCES SPELL IMMUNITY: No</br>
+    DAMAGE: 100 / 175 / 250 / 325</br>
+    RADIUS: 255</br>`,
+    'mana': '110/120/130/140',
+    'cooldown': '13',
+    'image_url': '/ability/sven_storm_hammer_hp1.png',
+    'video_url': 'https://youtu.be/-BNx6j67GMM'
+  },
+  {
+    'id': 30,
+    'hero_id': 8,
+    'name': 'Great Cleave',
+    'description': `Sven strikes with great force, cleaving all nearby enemy units with his attack.<br/>
+    </br>ABILITY: Passive</br>
+    PIERCES SPELL IMMUNITY: Yes</br>
+    CLEAVE DAMAGE: 40% / 50% / 60% / 70%</br>`,
+    'mana': 'passive',
+    'cooldown': 'passive',
+    'image_url': '/ability/sven_great_cleave_hp1.png',
+    'video_url': 'https://youtu.be/XRI-eUBr_S8'
+  },
+  {
+    'id': 31,
+    'hero_id': 8,
+    'name': 'Warcry',
+    'description': `Sven's Warcry heartens his allies for battle, increasing their movement speed and armor. Lasts 8 seconds.
+    <br/><br/>ABILITY: No Target</br>
+    BONUS ARMOR: 5 / 10 / 15 / 20</br>
+    BONUS SPEED: 12%</br>
+    RADIUS: 900</br>
+    DURATION: 8</br>`,
+    'mana': '25/25/25/25',
+    'cooldown': '35/30/25/20', 
+    'image_url': '/ability/sven_warcry_hp1.png', 
+    'video_url': 'https://youtu.be/npLme9BdTy8'
+  },
+  {
+    'id': 32,
+    'hero_id': 8,
+    'name': `God's Strength`,
+    'description': `Omniknight summons a Guardian Angel that grants immunity from physical damage. Upgradable by Aghanim's Scepter
+    <br/><br/>ABILITY: No Target</br>
+    PIERCES SPELL IMMUNITY: Yes</br>
+    DURATION: 6 / 7 / 8</br>
+    RADIUS: 600</br>
+    SCEPTER DURATION: 8 / 9 / 10</br>`,
+    'mana': '100/150/200',
+    'cooldown': '80',
+    'image_url': '/ability/sven_gods_strength_hp1.png',
+    'video_url': 'https://youtu.be/EbnTUOTMvkg'
+  },
+  {
+    'id': 33,
+    'hero_id': 9,
+    'name': 'Avalanche',
+    'description': `Bombards an area with rocks, stunning and damaging enemy land units.<br/>
+    </br>ABILITY: Point Target</br>
+    DAMAGE TYPE: Magical</br>
+    PIERCES SPELL IMMUNITY: No</br>
+    RADIUS: 275 / 275 / 275 / 275</br>
+    STUN DURATION: 1</br>`,
+    'mana': '120/120/120/120',
+    'cooldown': '23/21/19/17',
+    'image_url': '/ability/tiny_avalanche_hp1.png',
+    'video_url': 'https://youtu.be/t4JvtlBfJug'
+  },
+  {
+    'id': 34,
+    'hero_id': 9,
+    'name': 'Toss',
+    'description': `Grabs the nearest unit in a 275 radius around Tiny, ally or enemy, and launches it at the target unit or rune to deal damage where they land. If the tossed unit is an enemy, it will take an extra 30% damage.<br/>
+    </br>ABILITY: Unit Target</br>
+    DAMAGE TYPE: Magical</br>
+    PIERCES SPELL IMMUNITY: Yes</br>
+    RADIUS: 275</br>
+    RANGE: 1300</br>
+    DAMAGE: 90 / 160 / 230 / 300</br>`,
+    'mana': '90/100/110/120',
+    'cooldown': '11',
+    'image_url': '/ability/tiny_toss_hp1.png',
+    'video_url': 'https://youtu.be/4oDiWbybHgM'
+  },
+  {
+    'id': 35,
+    'hero_id': 9,
+    'name': 'Tree Grab',
+    'description': `Grabs a tree to whack enemies on the head for a limited number of times. Grants bonus attack range. Attacks deal more damage (increased vs. buildings) and fully splash on units along the way. The tree can be thrown, expending all the charges, to deal your attack to a unit at a distance.
+    <br/><br/>ABILITY: Unit Target</br>
+    DAMAGE TYPE: Physical</br>
+    PIERCES SPELL IMMUNITY: Yes</br>
+    ATTACK COUNT: 5</br>
+    BONUS DAMAGE: 25% / 30% / 35% / 40%</br>
+    BONUS BUILDING DAMAGE: 80% / 120% / 160% / 200%</br>
+    ATTACK RANGE: 350</br>
+    SPLASH DAMAGE: 30% / 40% / 50% / 60%	</br>`,
+    'mana': '50',
+    'cooldown': '24/20/16/12', 
+    'image_url': '/ability/tiny_tree_grab_hp1.png', 
+    'video_url': 'https://youtu.be/P0uPxATF8XE'
+  },
+  {
+    'id': 36,
+    'hero_id': 9,
+    'name': `Grow`,
+    'description': `Tiny gains craggy mass, increases his power and causes him to shrug off debuffs.
+    <br/><br/>ABILITY: Passive</br>
+    STATUS RESISTANCE: 30% / 40% / 50%</br>
+    BONUS ARMOR: 5 / 10 / 15</br>
+    BONUS DAMAGE: 30 / 45 / 60</br>
+    ATTACK SPEED REDUCTION: 20 / 35 / 50</br>`,
+    'mana': 'passive',
+    'cooldown': 'passive',
+    'image_url': '/ability/tiny_grow_hp1.png',
+    'video_url': 'https://youtu.be/4GB3qojLOHo'
+  },
+  {
+    'id': 37,
+    'hero_id': 10,
+    'name': 'Wraithfire Blast',
+    'description': `Wraith King sears an enemy unit with spectral fire, dealing damage and stunning, then dealing damage over time and slowing the target.<br/>
+    </br>ABILITY: Unit Target</br>
+    AFFECTS: Enemy Units</br>
+    DAMAGE TYPE: Magical</br>
+    PIERCES SPELL IMMUNITY: No</br>
+    DAMAGE: 100</br>
+    STUN DURATION: 1.1 / 1.4 / 1.7 / 2</br>
+    MOVEMENT SLOW: 20%</br>`,
+    'mana': '95/110/125/140',
+    'cooldown': '14/12/10/8',
+    'image_url': '/ability/wraith_king_wraithfire_blast.png',
+    'video_url': 'https://youtu.be/cjBrHQKjxm4'
+  },
+  {
+    'id': 38,
+    'hero_id': 10,
+    'name': 'Vampiric Aura',
+    'description': `Nearby friendly units restore health based on the damage they deal when attacking enemy units.<br/>
+    </br>AABILITY: No Target, Aura, Toggle</br>
+    AFFECTS: Allies</br>`,
+    'mana': 'passive',
+    'cooldown': 'passive',
+    'image_url': '/ability/wraith_king_vampiric_aura_hp1.png',
+    'video_url': 'https://youtu.be/0ZD6iTDTjcQ'
+  },
+  {
+    'id': 39,
+    'hero_id': 10,
+    'name': 'Mortal Strike',
+    'description': `Wraith King passively gains a chance to deal bonus damage on an attack. Every two kills on an enemy unit adds a skeleton charge.
+    <br/><br/>ABILITY: No Target</br>
+    AFFECTS: Enemy Heroes</br>
+    CRITICAL DAMAGE: 300%</br>
+    CRITICAL CHANCE: 9% / 11% / 13% / 15%</br>
+    SKELETON DURATION: 90</br>`,
+    'mana': '30/45/60/75',
+    'cooldown': '50', 
+    'image_url': '/ability/wraith_king_mortal_strike_hp1.png', 
+    'video_url': 'https://youtu.be/UMPnfE_N0YI'
+  },
+  {
+    'id': 40,
+    'hero_id': 10,
+    'name': `Reincarnation`,
+    'description': `Wraith King's form regroups after death, allowing him to resurrect when killed in battle. Upon death, enemy units in a 900 radius will be slowed. Upgradable by Aghanim's Scepter.
+    <br/><br/>ABILITY: Passive</br>
+    AFFECTS: Allied Heroes</br>
+    PIERCES SPELL IMMUNITY: No</br>
+    REINCARNATION TIME: 3 / 3 / 3</br>
+    MOVEMENT SLOW: 75%</br>
+    ATTACK SPEED SLOW: 75</br>
+    SLOW DURATION: 5</br>
+    SCEPTER ALLY DEATH DELAY: 7</br>
+    SCEPTER DEATH DELAY RADIUS: 1200</br>`,
+    'mana': '160',
+    'cooldown': '200/120/40',
+    'image_url': '/ability/wraith_king_reincarnation_hp1.png',
+    'video_url': 'https://youtu.be/3yGidbPrewk'
+  },
+  {
+    'id': 41,
+    'hero_id': 11,
+    'name': 'Mana Break',
+    'description': `Burns an opponent's mana on each attack. Mana Break deals 50% of the mana burned as damage to the target.<br/>
+    </br>ABILITY: Passive</br>
+    DAMAGE TYPE: Physical</br>
+    PIERCES SPELL IMMUNITY: No</br>
+    MANA BURNED PER HIT: 28 / 40 / 52 / 64</br>`,
+    'mana': 'passive',
+    'cooldown': 'passive',
+    'image_url': '/ability/antimage_mana_break_hp1.png',
+    'video_url': 'https://youtu.be/5n9dPC349Lw'
+  },
+  {
+    'id': 42,
+    'hero_id': 11,
+    'name': 'Blink',
+    'description': `Short distance teleportation that allows Anti-Mage to move in and out of combat.<br/>
+    </br>ABILITY: Point Target</br>`,
+    'mana': '60',
+    'cooldown': '15/12/9/6',
+    'image_url': '/ability/antimage_blink_hp1.png',
+    'video_url': 'https://youtu.be/HCJe7ilCyXo'
+  },
+  {
+    'id': 43,
+    'hero_id': 11,
+    'name': 'Spell Shield',
+    'description': `Increases Anti-Mage's resistance to magic damage. Upgradable by Aghanim's Scepter.
+    <br/><br/>ABILITY: Passive</br>`,
+    'mana': 'passive',
+    'cooldown': 'passive', 
+    'image_url': '/ability/antimage_spell_shield_hp1.png', 
+    'video_url': 'https://youtu.be/pQ6OlMLiA-A'
+  },
+  {
+    'id': 44,
+    'hero_id': 11,
+    'name': `Mana Void`,
+    'description': `For each point of mana missing by the target unit, damage is dealt to it and surrounding enemies. The main target is also mini-stunned.
+    <br/><br/>ABILITY: Unit Target</br>
+    AFFECTS: Enemy Units</br>
+    DAMAGE TYPE: Magical</br>
+    PIERCES SPELL IMMUNITY: Yes</br>
+    DAMAGE: 0.8 / 0.95 / 1.1</br>
+    STUN DURATION: 0.3</br>
+    RADIUS: 500</br>`,
+    'mana': '125/200/275',
+    'cooldown': '70',
+    'image_url': '/ability/antimage_mana_void_hp1.png',
+    'video_url': 'https://youtu.be/qi1_xFE6nBI'
+  },
+  {
+    'id': 45,
+    'hero_id': 12,
+    'name': 'Frost Arrows',
+    'description': `Adds a freezing effect to Drow's attacks, slowing enemy movement. Lasts 1.5 seconds on Heroes, and 7 seconds on creeps.<br/>
+    </br>ABILITY: Auto-Cast, Unit Target</br>
+    AFFECTS: Enemy Units</br>
+    PIERCES SPELL IMMUNITY: No</br>
+    DAMAGE: 0 / 0 / 0 / 0</br>
+    MOVEMENT SLOW: 16% / 32% / 48% / 64%</br>
+    HERO DURATION: 1.5</br>
+    CREEP DURATION: 7</br>`,
+    'mana': '12/12/12/12',
+    'cooldown': '0',
+    'image_url': '/ability/drow_ranger_frost_arrows_hp1.png',
+    'video_url': 'https://youtu.be/u6dvUwbjI_k'
+  },
+  {
+    'id': 46,
+    'hero_id': 12,
+    'name': 'Gust',
+    'description': `Releases a wave that silences and knocks back enemy units. Knockback distance is relative to how close they are to you.<br/>
+    </br>ABILITY: Point Target</br>`,
+    'mana': '90',
+    'cooldown': '16/15/14/13',
+    'image_url': '/ability/drow_ranger_gust_hp1.png',
+    'video_url': 'https://www.youtube.com/watch?v=ob79Mz9QdNQ'
+  },
+  {
+    'id': 47,
+    'hero_id': 12,
+    'name': 'Precision Aura',
+    'description': `Adds bonus damage to the physical attack of allied, ranged Hero units based on a percentage of Drow's agility. Affects creeps for 30 seconds when cast.
+    <br/><br/>ABILITY: No Target</br>
+    AFFECTS: Allies</br>`,
+    'mana': '0',
+    'cooldown': '100', 
+    'image_url': '/ability/drow_ranger_precision_aura_hp1.png', 
+    'video_url': 'https://youtu.be/wNzhcuzDmf0'
+  },
+  {
+    'id': 48,
+    'hero_id': 12,
+    'name': `Marksmanship`,
+    'description': `Drow's experiences in battle improve her accuracy and effectiveness in combat, providing a passive bonus to Agility. Grants no bonus if there are enemy heroes within 400 range. Upgradable by Aghanim's Scepter.
+    <br/><br/>ABILITY: Passive</br>
+    SCEPTER SPLIT COUNT: 2</br>
+    SEARCH RANGE: 375</br>
+    DAMAGE REDUCTION: 50%</br>`,
+    'mana': 'passive',
+    'cooldown': 'passive',
+    'image_url': '/ability/drow_ranger_marksmanship_hp1.png',
+    'video_url': 'https://youtu.be/wfgqVIVWpr8'
+  },
+  {
+    'id': 49,
+    'hero_id': 13,
+    'name': 'Blade Fury',
+    'description': `Causes a bladestorm of destructive force around Juggernaut, rendering him immune to magic and dealing damage to nearby enemy units. DISPEL TYPE: Basic Dispel<br/>
+    </br>ABILITY: No Target</br>
+    DAMAGE TYPE: Magical</br>
+    PIERCES SPELL IMMUNITY: No</br>
+    RADIUS: 250</br>`,
+    'mana': '120/110/100/90',
+    'cooldown': '42/34/26/18',
+    'image_url': '/ability/juggernaut_blade_fury_hp1.png',
+    'video_url': 'https://youtu.be/0XijKqh4EJI'
+  },
+  {
+    'id': 50,
+    'hero_id': 13,
+    'name': 'Healing Ward',
+    'description': `Summons a Healing Ward which heals all nearby allied units, based on their max health. The Healing Ward moves at 420 movement speed after being summoned. Lasts 25 seconds.
+    <br/><br/>ABILITY: Point Target</br>
+    MAX HEALTH PER SECOND: 2% / 3% / 4% / 5%</br>`,
+    'mana': '140',
+    'cooldown': '60', 
+    'image_url': '/ability/juggernaut_healing_ward_hp1.png', 
+    'video_url': 'https://youtu.be/Wvh64L7ndTs'
+  },
+  {
+    'id': 51,
+    'hero_id': 13,
+    'name': `Blade Dance`,
+    'description': `Gives Juggernaut a chance to deal critical damage on each attack.
+    <br/><br/>ABILITY: Passive</br>
+    CRITICAL CHANCE: 20% / 25% / 30% / 35%</br>
+    CRITICAL DAMAGE: 180%</br>`,
+    'mana': 'passive',
+    'cooldown': 'passive',
+    'image_url': '/ability/juggernaut_blade_dance_hp1.png',
+    'video_url': 'https://youtu.be/J0i1IyxpvB0'
+  },
+  {
+    'id': 52,
+    'hero_id': 13,
+    'name': `Omnislash`,
+    'description': `Juggernaut leaps towards the target enemy unit with a damaging attack, and then slashes other nearby enemy units, dealing between 200-225 damage per slash. Juggernaut is invulnerable for the duration. Upgradable by Aghanim's Scepter.
+    <br/><br/>ABILITY: Unit Target</br>
+    AFFECTS: Enemy Units</br>
+    DAMAGE TYPE: Physical</br>
+    PIERCES SPELL IMMUNITY: Yes</br>
+    SLASH JUMP RADIUS: 425</br>
+    SCEPTER COOLDOWN: 70</br>`,
+    'mana': '200/275/350',
+    'cooldown': '130/120/110',
+    'image_url': '/ability/juggernaut_omni_slash_hp1.png',
+    'video_url': 'https://youtu.be/T4HOd3lIgyQ'
+  },
 ]
