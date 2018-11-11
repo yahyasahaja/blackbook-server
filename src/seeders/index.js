@@ -28,8 +28,8 @@ export const giveSeeds = async () => {
 
   //ABILITIES
   await Ability.destroy({ where: {}, force: true })
-  let cb = await Ability.bulkCreate(abilities)
-  console.log(cb.map(d => d.id))
+  await Ability.bulkCreate(abilities)
+  // console.log(cb.map(d => d.id))
 
   //STATUSES
   await Status.destroy({ where: {}, force: true })

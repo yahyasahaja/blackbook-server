@@ -14,7 +14,7 @@ export default async (obj, { email, password }) => {
       throw new Error('Invalid Password')
     }
     
-    console.log(user.id)
+    // console.log(user.id)
     return jwt.sign(
       {
         scope: 
