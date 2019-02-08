@@ -87,7 +87,7 @@ app.use(
   authMiddleware,
   bodyParser.json(),
   cors(),
-  apolloUploadExpress(),
+  apolloUploadExpress({ maxFileSize: 10000000, maxFiles: 10 }),
   graphqlExpress(req => ({
     schema,
     pretty: true,
